@@ -1,11 +1,10 @@
 import express from 'express';
+import { createCourse } from '../routes';
 
 const app = express();
 
 const PORT = 3333;
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'Hello World' });
-})
+app.get('/', createCourse);
 
 app.listen(PORT);
