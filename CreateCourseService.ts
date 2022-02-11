@@ -1,11 +1,11 @@
 interface CreateCourseTypeProps {
   name: string;
-  duration: number;
+  duration?: number;
   educator: string;
 };
 
 class CreateCourseService {
-  execute({ name, duration, educator } : CreateCourseTypeProps) {
+  execute({ name, duration = 8, educator } : CreateCourseTypeProps) {
     console.log(name, duration, educator);
   }
 }
